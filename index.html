@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+      <html lang="en-US">
+      <meta charset="UTF-8">
+      <meta name="description" content="Free Pumpkin Destruction website">
+      <meta name="MinimumWake" content="borrowed public images and code for a class not a real website">
+      <title>Light the Jack-0-Latern</title>
+
+      <style>
+        body {background-color: orange; }
+        #contentWrapper {margin-left: 30%; }
+      </style>
+    </head>
+
+    <body>
+      <div id="contentWrapper">
+        
+        <h1 >Happy Halloween!</h1>
+        <p>Click on the target to light the Jack-o-Lantern! Watch your fingers...
+        </p>
+        <img id="myImage" onclick="changeImage()" src="image1_pumpkin.jpg" width="550" height="400">
+
+        <script> alert ("Be careful with M-80's!");</script>
+
+        <script>
+          function changeImage() {
+            var image = document.getElementById('myImage');
+              if (image.src.match("image3_pumpkin")) {
+              image.src = "image1_pumpkin.jpg";
+              } else {
+              image.src = "image3_pumpkin.jpg";
+              } 
+          }
+        </script>
+
+        <script type="text/javascript" language="javascript">
+          onload = function(){
+            document.MyForm.MyTextField.focus();}
+            function DisplayValue(){
+              if(document.MyForm.MyTextField.value!==""){
+              alert( document.MyForm.MyTextField.value + ", " + "you shouldn't               blow up pumpkins!");
+            }else{ 
+            alert("Take resonsibility for what you've done!.");
+                }
+            }
+        </script>
+
+        <form name="MyForm"  method="Post" onsubmit="DisplayValue()">
+          <input type="text" name="MyTextField"/>
+            <h2>Enter your name</h2>
+          <input type="submit" value="Click to Submit"/>
+        </form>
+      </div>
+    </body>
+</html>
